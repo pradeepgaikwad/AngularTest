@@ -1,0 +1,9 @@
+<br><br><br>
+    <div *ngFor="let employee of employees">
+        <p>{{employee.id }} {{ employee.Name }} {{ employee.Age}}</p>
+    </div>
+    <h1>{{errors}}</h1><br>
+<button type="button" (click)="HandleClick()">Submit</button>
+<br><br>
+    {{employees | json}}
+    <br><br><br>
