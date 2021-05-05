@@ -5,6 +5,5 @@
     {"id":4 , "Name":"Sharada", "Age":23},
     {"id":5 , "Name":"Uttamrao", "Age":46},
     {"id":6 , "Name":"Laxmibai", "Age":45},
-    {"id": 7, "Name":"Tushar", "Age":27},
-    {"id": 8, "Name":"Anil", "Age":28}
+    {"id": 7, "Name":"Tushar", "Age":27}
 ]
