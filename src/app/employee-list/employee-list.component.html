@@ -3,7 +3,9 @@
         <p>{{employee.id }} {{ employee.Name }} {{ employee.Age}}</p>
     </div>
     <h1>{{errors}}</h1><br>
+    <div *ngIf="readonly && compute">
 <button type="button" (click)="HandleClick()">Submit</button>
+</div>
 <br><br>
     {{employees | json}}
     <br><br><br>

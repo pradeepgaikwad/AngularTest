@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 
 @Component({
@@ -10,6 +10,9 @@ export class EmployeeListComponent implements OnInit {
    employees=[];
    errors;
   constructor(private _service : EmployeeService) { }
+@Input() readonly: Boolean;
+@Input() compute: Boolean;
+@Output() public myName =new EventEmitter<String>(); 
 
   ngOnInit(): void {
     this._service.getEmployees()
@@ -18,8 +21,9 @@ export class EmployeeListComponent implements OnInit {
       error => this.errors=error);
       console.log('Array',this.employees);
       this.employees=this.employees.filter(i=>i.Name!=='Pradeep');
-      
+      this.myName.emit("Hello Pradeep");
   }
+
   HandleClick(){
     this.employees=this.employees.filter(i=>i.Name!=='Pradeep');
     console.log('Hello');
